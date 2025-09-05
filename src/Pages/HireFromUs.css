@@ -1,0 +1,172 @@
+.hire-hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e1e2f, #232946);
+    background-size: 300% 300%;
+    animation: gradientMove 15s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: white;
+    overflow: hidden;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* glowing circles */
+
+.overlay::before,
+.overlay::after {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: 0;
+}
+
+.overlay::before {
+    background: #ff6b35;
+    top: -100px;
+    left: -100px;
+}
+
+.overlay::after {
+    background: #3b82f6;
+    bottom: -150px;
+    right: -120px;
+}
+
+.hire-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hire-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hire-title span {
+    background: linear-gradient(to right, #ff6b35, #ffb703, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hire-desc {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    color: #fbbf24;
+    font-weight: bold;
+}
+
+
+/* Benefits Grid */
+
+.hire-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffb703;
+}
+
+
+/* Buttons */
+
+.hire-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-hire,
+.btn-contact {
+    padding: 14px 32px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hire {
+    background: linear-gradient(45deg, #ff6b35, #ffb703);
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5);
+}
+
+.btn-hire:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.7);
+}
+
+.btn-contact {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fbbf24;
+    border: 2px solid #fbbf24;
+}
+
+.btn-contact:hover {
+    background: #fbbf24;
+    color: #0f172a;
+    transform: translateY(-4px);
+}
