@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -62,7 +62,8 @@ function App() {
             <Route path="/job-bootcamp" element={<JobBootcamp />} />
             <Route path="/iit-certifications" element={<IITCertifications />} />
             <Route path="/new-launches" element={<NewLaunches />} />
-            <Route path="/graduates" element={<Graduates />} /> {/* ✅ new */}
+            <Route path="/graduates" element={<Graduates />} />
+            <Route path="/college-students" element={<CollegeStudents />} />
 
             {/* Community */}
             <Route path="/10x-club" element={<TenXClub />} />
