@@ -1,0 +1,80 @@
+.press-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: "Segoe UI", sans-serif;
+    color: #222;
+}
+
+.press-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.press-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.press-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.press-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.press-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.press-content {
+    padding: 20px;
+}
+
+.press-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.press-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #1a73e8;
+}
+
+.press-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.press-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff5722;
+    transition: color 0.3s ease;
+}
+
+.press-link:hover {
+    color: #d84315;
+}
