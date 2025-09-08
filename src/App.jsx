@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -40,50 +40,47 @@ import PressRelease from "./pages/PressRelease";
 
 function App() {
   return (
-    <Router>
-      {/* Gradient Background */}
-      <div className="min-h-screen flex flex-col bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            {/* Core */}
-            <Route path="/" element={<Home />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white">
+      <Navbar />
+      <main className="flex-grow">
+        <Routes>
+          {/* Core */}
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
-            {/* Certificates */}
-            <Route path="/student-certificates" element={<StudentCertificates />} />
-            <Route path="/professional-certificates" element={<ProfessionalCertificates />} />
-            <Route path="/bootcamp-certificates" element={<BootcampCertificate />} />
-            <Route path="/job-bootcamp" element={<JobBootcamp />} />
-            <Route path="/iit-certifications" element={<IITCertifications />} />
-            <Route path="/new-launches" element={<NewLaunches />} />
-            <Route path="/graduates" element={<Graduates />} />
-            <Route path="/college-students" element={<CollegeStudents />} />
+          {/* Certificates */}
+          <Route path="/student-certificates" element={<StudentCertificates />} />
+          <Route path="/professional-certificates" element={<ProfessionalCertificates />} />
+          <Route path="/bootcamp-certificates" element={<BootcampCertificate />} />
+          <Route path="/job-bootcamp" element={<JobBootcamp />} />
+          <Route path="/iit-certifications" element={<IITCertifications />} />
+          <Route path="/new-launches" element={<NewLaunches />} />
+          <Route path="/graduates" element={<Graduates />} />
+          <Route path="/college-students" element={<CollegeStudents />} />
 
-            {/* Community */}
-            <Route path="/10x-club" element={<TenXClub />} />
-            <Route path="/student-chapters" element={<StudentChapters />} />
-            <Route path="/hire" element={<HireFromUs />} />
+          {/* Community */}
+          <Route path="/10x-club" element={<TenXClub />} />
+          <Route path="/student-chapters" element={<StudentChapters />} />
+          <Route path="/hire" element={<HireFromUs />} />
 
-            {/* Footer Pages */}
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/pricing-refund" element={<PricingRefund />} />
-            <Route path="/bug-bounty" element={<BugBounty />} />
-            <Route path="/review" element={<Review />} />
-            <Route path="/press-release" element={<PressRelease />} />
-            <Route path="/payment" element={<PaymentPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+          {/* Footer Pages */}
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/pricing-refund" element={<PricingRefund />} />
+          <Route path="/bug-bounty" element={<BugBounty />} />
+          <Route path="/review" element={<Review />} />
+          <Route path="/press-release" element={<PressRelease />} />
+          <Route path="/payment" element={<PaymentPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
